@@ -1,5 +1,4 @@
 import NavIconButton from "../../Buttons/NavIconButton/NavIconButton";
-import DashboardIcon from "../../Icons/DashboardIcon";
 import "./SideMenu.scss";
 
 function SideMenu() {
