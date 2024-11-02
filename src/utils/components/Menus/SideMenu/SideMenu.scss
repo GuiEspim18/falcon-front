@@ -15,4 +15,12 @@
             margin: 15px 0px;
         }
     }
+
+    hr {
+        margin: 5px;
+        border: none;
+        background-color: $secodaryGray;
+        height: 2px;
+        border-radius: 2px;
+    }
 }

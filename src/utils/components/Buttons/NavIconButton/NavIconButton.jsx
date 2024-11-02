@@ -1,7 +1,6 @@
-import icons from "../../Icons/icons";
-import "./IconButton.scss";
+import "./NavIconButton.scss";
 
-function IconButton(props) {
+function NavIconButton(props) {
 
     return (
         <button className="icon-button">
@@ -11,4 +10,4 @@ function IconButton(props) {
     );
 }
 
-export default IconButton
+export default NavIconButton

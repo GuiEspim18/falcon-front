@@ -1,4 +1,4 @@
-import IconButton from "../../Buttons/IconButton/IconButton";
+import NavIconButton from "../../Buttons/NavIconButton/NavIconButton";
 import DashboardIcon from "../../Icons/DashboardIcon";
 import "./SideMenu.scss";
 
@@ -9,9 +9,15 @@ function SideMenu() {
                 <img src="/src/images/logo.png" alt="" className="logo" />
             </div>
             <nav className="navs">
-                <IconButton icon="dashboard" text="Dashboard" />
-                <IconButton icon="people" text="Alunos" />
-                <IconButton icon="account" text="Meu Perfil" />
+                <NavIconButton icon="dashboard" text="Dashboard" />
+                <NavIconButton icon="people" text="Alunos" />
+                <NavIconButton icon="account" text="Meu Perfil" />
+                <NavIconButton icon="chat" text="Mensagens" />
+                <NavIconButton icon="stars" text="Rancking" />
+                <hr />
+                <NavIconButton icon="settings" text="Configuração" />
+                <NavIconButton icon="help" text="HelpCenter" />
+                <NavIconButton icon="logout" text="Sair" />
             </nav>
         </section>
     );
