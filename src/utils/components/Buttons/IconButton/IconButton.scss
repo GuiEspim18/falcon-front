@@ -1,0 +1,28 @@
+@import "/src/assets/css/colors.scss";
+
+.icon-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    transition: 0.3s;
+    cursor: pointer;
+
+    img {
+        width: 25px;
+    }
+
+    p {
+        color: $mainBlue;
+        font-size: 0.8rem;
+        margin-left: 15px;
+        font-weight: bold;
+    }
+
+    &:hover {
+        background-color: $lightBlue;
+    }
+}
