@@ -4,4 +4,8 @@
     display: flex;
     height: 100%;
     background-color: $mainWhite;
+
+    .page-content {
+        width: 100%;
+    }
 }
