@@ -1,0 +1,22 @@
+@import "/src/assets/css/colors.scss";
+
+.title-header {
+    width: 100%;
+    height: 60px;
+    background-color: $lightBlue;
+    padding: 0px 30px;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+    h1, h3 {
+        color: $mainBlue;
+        margin: 0;
+    }
+
+    p {
+        color: $softBlue;
+        margin: 0;
+    }
+}
