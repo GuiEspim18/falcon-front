@@ -48,6 +48,9 @@ function LineChart(props) {
                 font: { size: 18 },
                 color: "#333333",
             },
+            datalabels: {
+                display: false
+            },
         },
         scales: {
             x: {

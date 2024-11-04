@@ -29,7 +29,11 @@ function DoughnutChart(props) {
         plugins: {
             legend: { display: false }, // Remove a legenda
             tooltip: { enabled: false }, // Desabilita o tooltip
+            datalabels: {
+                display: false
+            },
         },
+       
         elements: {
             arc: {
                 borderRadius: 0, // Arredonda as extremidades

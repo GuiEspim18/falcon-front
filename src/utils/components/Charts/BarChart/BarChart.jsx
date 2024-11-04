@@ -1,8 +1,9 @@
 import { Bar } from "react-chartjs-2";
 import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
+import ChartDataLabels from "chartjs-plugin-datalabels";
 import "./BarChart.scss";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend, ChartDataLabels);
 
 function BarChart(props) {
     const data = {
@@ -10,7 +11,7 @@ function BarChart(props) {
         datasets: [
             {
                 label: "Média de erros",
-                data: [3, 5, 6, 4, 2],
+                data: [3, 5, 10, 8, 2],
                 backgroundColor: [
                     "#6F9EDA",
                     "#3B6FB4",
@@ -36,9 +37,21 @@ function BarChart(props) {
                     label: (context) => `${context.raw}`,
                 },
             },
+            datalabels: {
+                clip: false,
+                anchor: "end", // Posição do rótulo
+                align: "top",  // Alinhamento do rótulo
+                formatter: (value) => value, // Formatação do rótulo
+                font: {
+                    size: 19,
+                    weight: "bold"
+                },
+                color: "#0548A0", // Cor do rótulo
+            }
         },
         scales: {
             y: {
+                max: 11,
                 beginAtZero: true,
                 ticks: {
                     display: false,
