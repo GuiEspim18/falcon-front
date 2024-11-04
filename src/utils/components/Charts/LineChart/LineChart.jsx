@@ -66,7 +66,7 @@ function LineChart() {
         <div className="line-chart ">
             <h2>Evolução dos residentes no ano</h2>
             <div className="chart">
-                <Line data={data} options={options} /> {/* Define a largura e altura do gráfico */}
+                <Line data={data} options={options} />
             </div>
         </div>
     );

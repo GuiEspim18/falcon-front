@@ -28,39 +28,40 @@ function BarChart() {
 
     const options = {
         responsive: true,
+        maintainAspectRatio: false, // Permite que o gráfico ocupe todo o espaço disponível
         plugins: {
-            legend: { display: false }, // Esconde a legenda
+            legend: { display: false },
             tooltip: {
                 callbacks: {
-                    label: (context) => `${context.raw}`, // Exibe apenas o valor sem o rótulo
+                    label: (context) => `${context.raw}`,
                 },
-            }
+            },
         },
         scales: {
             y: {
                 beginAtZero: true,
                 ticks: {
-                    display: false, // Esconde os valores no eixo Y
+                    display: false,
                     stepSize: 1,
                 },
                 grid: {
-                    display: false, // Remove a grade no eixo Y
+                    display: false,
                 },
                 border: {
-                    display: false, // Remove o traço da borda do eixo Y
+                    display: false,
                 },
             },
             x: {
                 grid: {
-                    display: false, // Remove a grade no eixo X
+                    display: false,
                 },
                 ticks: {
                     font: {
-                        size: 14, // Ajuste o tamanho da fonte das labels no eixo X, se necessário
+                        size: 14,
                     },
                 },
                 border: {
-                    display: false, // Remove o traço da borda do eixo X
+                    display: false,
                 },
             },
         },
@@ -70,8 +71,10 @@ function BarChart() {
 
     return (
         <div className="bar-chart">
-            <h2 style={{ textAlign: "center" }}>Média de erros por fase</h2>
-            <Bar data={data} options={options} className="chart" />
+            <h2>Média de erros por fase</h2>
+            <div className="chart">
+                <Bar data={data} options={options} />
+            </div>
         </div>
     );
 }

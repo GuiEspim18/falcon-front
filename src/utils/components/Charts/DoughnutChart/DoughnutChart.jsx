@@ -40,12 +40,10 @@ function DoughnutChart(props) {
 
     return (
         <div className="doughnut-chart">
-            <p>
-                Melhoraram seu desempenho
-            </p>
+            <h2>Melhoraram seu desempenho</h2>
             <Doughnut data={data} options={options} className="chart" />
             <div className="label">
-                {props.percentage}%
+                <p>{props.percentage}%</p>
             </div>
         </div>
     );

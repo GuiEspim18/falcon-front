@@ -3,19 +3,18 @@
 .line-chart {
     border: 1px solid $secodaryGray;
     border-radius: 5px;
-    // display: flex;
-    // flex-direction: column;
-    // justify-content: space-around;
-    // align-items: center;
+    padding: 5px;
+    box-sizing: border-box;
 
     h2 {
         width: 100%;
         text-align: center;
+        margin: 0px;
+        margin-bottom: 5px;
     }
 
     .chart{
         width: 100% !important;
-        height: 70% !important;
     }
 
 }
