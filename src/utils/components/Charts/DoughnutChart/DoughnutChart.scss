@@ -1,0 +1,31 @@
+@import "/src/assets/css/colors.scss";
+
+.doughnut-chart {
+    position: relative;
+    border: solid 1px $secodaryGray;
+    border-radius: 5px;
+
+    p {
+        text-align: center;
+        font-size: 16px;
+        font-weight: bold;
+    }
+
+    .label {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-size: 40px;
+        font-weight: bold;
+        color: $mainBlue;
+        margin-top: 20px;
+    }
+
+    .chart {
+        margin: 0 auto;
+        width: 80% !important;
+        height: 80% !important;
+    }
+
+}

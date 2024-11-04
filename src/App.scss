@@ -1,5 +1,9 @@
 @import "/src/assets/css/colors.scss";
 
+body {
+    font-family: Arial;
+}
+
 .content {
     display: flex;
     height: 100%;
@@ -7,5 +11,7 @@
 
     .page-content {
         width: 100%;
+        display: flex;
+        flex-direction: column;
     }
 }

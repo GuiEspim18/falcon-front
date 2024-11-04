@@ -3,4 +3,13 @@
 .bar-chart {
     border: 1px solid $secodaryGray;
     border-radius: 5px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+    .chart {
+        margin: 5px auto;
+    }
 }

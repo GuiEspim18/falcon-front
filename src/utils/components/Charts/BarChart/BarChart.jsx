@@ -71,7 +71,7 @@ function BarChart() {
     return (
         <div className="bar-chart">
             <h2 style={{ textAlign: "center" }}>Média de erros por fase</h2>
-            <Bar data={data} options={options} />
+            <Bar data={data} options={options} className="chart" />
         </div>
     );
 }
