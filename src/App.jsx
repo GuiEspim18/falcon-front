@@ -1,7 +1,7 @@
 import TitleHeader from "./utils/components/Headers/TitleHeader/TitleHeader";
 import SideMenu from "./utils/components/Menus/SideMenu/SideMenu";
 import "./App.scss";
-import BarChart from "./utils/components/Charts/BarChart/BarChart";
+import LineChart from "./utils/components/Charts/LineChart/LineChart";
 
 function App() {
   return (
@@ -9,7 +9,7 @@ function App() {
         <SideMenu />
         <section className="page-content">
           <TitleHeader title="Dashboard" />
-          <BarChart />
+          <LineChart />
         </section>
     </section>
   );

@@ -1,22 +1,22 @@
-import { Bar } from 'react-chartjs-2';
-import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from 'chart.js';
+import { Bar } from "react-chartjs-2";
+import { Chart as ChartJS, BarElement, CategoryScale, LinearScale, Tooltip, Legend } from "chart.js";
 import "./BarChart.scss";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
 function BarChart() {
     const data = {
-        labels: ['Fase 1', 'Fase 2', 'Fase 3', 'Fase 4', 'Fase 5'],
+        labels: ["Fase 1", "Fase 2", "Fase 3", "Fase 4", "Fase 5"],
         datasets: [
             {
-                label: 'Média de erros',
+                label: "Média de erros",
                 data: [3, 5, 6, 4, 2],
                 backgroundColor: [
-                    '#6F9EDA',
-                    '#3B6FB4',
-                    '#185EBA',
-                    '#557FB5',
-                    '#5C99E8',
+                    "#6F9EDA",
+                    "#3B6FB4",
+                    "#185EBA",
+                    "#557FB5",
+                    "#5C99E8",
                 ],
                 borderRadius: 15, // Arredonda as bordas das colunas
                 barPercentage: 0.5, // Controla a largura das barras (0.1 a 1)
@@ -70,7 +70,7 @@ function BarChart() {
 
     return (
         <div className="bar-chart">
-            <h2 style={{ textAlign: 'center' }}>Média de erros por fase</h2>
+            <h2 style={{ textAlign: "center" }}>Média de erros por fase</h2>
             <Bar data={data} options={options} />
         </div>
     );
