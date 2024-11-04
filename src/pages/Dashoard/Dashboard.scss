@@ -5,6 +5,7 @@
     flex-grow: 1;
     padding: 20px;
     box-sizing: border-box;
+    overflow-y: auto;
 
     h1 {
         font-size: 1.5rem;
@@ -21,23 +22,24 @@
 
         .double-chart-holder {
             width: 35%;
-            height: 100%;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
 
-            .line-chart-holder {
-                height: 45%;
+            .line-chart-holder-1 {
+                margin-bottom: 15px;
             }
 
-            .doughnut-chart-holder {
-                height: 45%;
-                display: flex;
+            .line-chart-holder-1, .line-chart-holder-2 {
+                height: 48.2%;
             }
         }
 
-        .loader-indicator {
-            width: 20% !important;
+        .loader-indicator-holder {
+            height: 100%;
+            width: 20%;
+
+            .doughnut-chart-holder-1 {
+                margin-bottom: 15px;
+            }
+
         }
     }
 }

@@ -4,7 +4,7 @@ import "./BarChart.scss";
 
 ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
 
-function BarChart() {
+function BarChart(props) {
     const data = {
         labels: ["Fase 1", "Fase 2", "Fase 3", "Fase 4", "Fase 5"],
         datasets: [
@@ -71,7 +71,7 @@ function BarChart() {
 
     return (
         <div className="bar-chart">
-            <h2>Média de erros por fase</h2>
+            <h2>{props.title}</h2>
             <div className="chart">
                 <Bar data={data} options={options} />
             </div>

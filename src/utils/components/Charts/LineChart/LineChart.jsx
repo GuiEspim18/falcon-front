@@ -21,7 +21,7 @@ ChartJS.register(
   Legend
 );
 
-function LineChart() {
+function LineChart(props) {
     const data = {
         labels: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dec"],
         datasets: [
@@ -64,7 +64,7 @@ function LineChart() {
 
     return (
         <div className="line-chart ">
-            <h2>Evolução dos residentes no ano</h2>
+            <h2>{props.title}</h2>
             <div className="chart">
                 <Line data={data} options={options} />
             </div>

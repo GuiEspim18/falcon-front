@@ -18,7 +18,7 @@ function DoughnutChart(props) {
                 data: [props.percentage, 100 - props.percentage], // Progresso e restante
                 backgroundColor: ["#0057B7", "#E0E0E0"], // Azul para o progresso, cinza para o fundo
                 borderWidth: 0,
-                cutout: "75%", // Controla a espessura do círculo
+                cutout: "85%", // Controla a espessura do círculo
             },
         ],
     };
@@ -40,7 +40,7 @@ function DoughnutChart(props) {
 
     return (
         <div className="doughnut-chart">
-            <h2>Melhoraram seu desempenho</h2>
+            <h2>{props.title}</h2>
             <Doughnut data={data} options={options} className="chart" />
             <div className="label">
                 <p>{props.percentage}%</p>
