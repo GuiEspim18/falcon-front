@@ -1,1 +1,21 @@
 @import "/src/assets/css/colors.scss";
+
+.line-chart {
+    border: 1px solid $secodaryGray;
+    border-radius: 5px;
+    // display: flex;
+    // flex-direction: column;
+    // justify-content: space-around;
+    // align-items: center;
+
+    h2 {
+        width: 100%;
+        text-align: center;
+    }
+
+    .chart{
+        width: 100% !important;
+        height: 70% !important;
+    }
+
+}

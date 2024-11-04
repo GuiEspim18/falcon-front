@@ -16,16 +16,15 @@
         top: 50%;
         left: 50%;
         transform: translate(-50%, -50%);
-        font-size: 40px;
+        font-size: 2rem;
         font-weight: bold;
         color: $mainBlue;
-        margin-top: 20px;
     }
 
     .chart {
         margin: 0 auto;
-        width: 80% !important;
-        height: 80% !important;
+        width: 70% !important;
+        height: 70% !important;
     }
 
 }
