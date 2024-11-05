@@ -9,7 +9,7 @@ function NavIconButton(props) {
     }
 
     return (
-        <button className={"icon-button " + (props.selected ? "selected" : "") } onClick={click}>
+        <button className={"nav-icon-button " + (props.selected ? "selected" : "") } onClick={click}>
             <img src={"/src/images/icons/" + props.icon + ".png"} alt="" />
             <p>{props.text}</p>
         </button>

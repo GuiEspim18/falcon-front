@@ -1,0 +1,17 @@
+@import "/src/assets/css/colors.scss";
+
+.icon-button {
+    width: 30px;
+    height: 30px;
+    border-radius: 30px;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    img {
+        width: 5px;
+    }
+}

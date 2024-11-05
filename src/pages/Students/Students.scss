@@ -7,4 +7,30 @@
     padding: 20px;
     box-sizing: border-box;
     overflow: auto;
+
+    h1, p {
+        margin: 0;
+    }
+
+    h1 {
+        font-size: 1.5rem;
+    }
+
+    p {
+        color: $darkGray;
+    }
+
+    .table-holder {
+        margin-top: 20px;
+
+        .table-title {
+            display: flex;
+            margin-bottom: 10px;
+
+            .quantity {
+                color: $darkGray;
+                margin-left: 5px;
+            }
+        }
+    }
 }

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import "./Table.scss";
+import IconButton from "../Buttons/IconButton/IconButton";
 
 function Table(props) {
     const [values, setValues] = useState(props.values);
@@ -27,9 +28,10 @@ function Table(props) {
                     {Object.keys(value).map(function (key, index) {
                         return <td key={index}>{value[key]}</td>;
                     })}
-                    {/* {props.actions && 
+                    {props.actions && 
                         <td className="actions">
-                            {props.edit && 
+                            <IconButton icon="options" />
+                            {/* {props.edit && 
                                 <IconButton className="action-button" rippleColor={shadow} onClick={function () { onEdit(value.id) }}>
                                     <Edit color={yellow} />
                                 </IconButton>
@@ -38,9 +40,9 @@ function Table(props) {
                                 <IconButton className="action-button" rippleColor={shadow} onClick={function () { onDelete(value.id) }}>
                                     <Delete color={red} />
                                 </IconButton>
-                            }
+                            } */}
                         </td>
-                    } */}
+                    }
                 </tr>
             );
         });
@@ -50,7 +52,7 @@ function Table(props) {
         <table className="table">
             <thead>
                 {loadHeaders()}
-                {props.actions && <th className="actions-header">Ações</th>}
+                {props.actions && <th className="actions-header"></th>}
             </thead>
             <tbody>
                 {loadValues()}
