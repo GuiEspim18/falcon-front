@@ -1,0 +1,9 @@
+@import "/src/assets/css/colors.scss";
+
+.text-input {
+    height: 32px;
+    border: solid 1px $darkGray;
+    border-radius: 5px;
+    background: $mainWhite;
+    padding: 0px 10px;
+}

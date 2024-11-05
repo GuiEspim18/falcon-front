@@ -37,7 +37,38 @@
                 background-position: center;
                 background-repeat: no-repeat;
                 background-size: cover;
-                border: solid 1px $mainWhite;
+                border: solid 2px $mainWhite;
+            }
+        }
+
+        .student-data {
+            padding-top: 50px;
+            margin-left: 10px;
+            width: 25%;
+            margin-bottom: 20px;
+
+            h3, p {
+                margin: 0;
+                text-align: center;
+            }
+
+            p {
+                color: $darkGray;
+            }
+        }
+
+        hr {
+            margin: 10px;
+        }
+
+        .data {
+            display: flex;
+            padding: 0px 15px;
+            align-items: center;
+            justify-content: space-between;
+
+            .email {
+                width: 369px;
             }
         }
     }

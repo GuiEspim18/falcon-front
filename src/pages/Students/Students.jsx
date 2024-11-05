@@ -8,11 +8,11 @@ import "./Students.scss";
 
 function Students() {
     const tableData = [
-        { id: 1, rm: "98297", name: "João", email: "joao.zamperlini@usp.com", photo: "src/images/users/joao.png" },
-        { id: 2, rm: "91267", name: "Lucas", email: "lucas.speranzini@usp.com", photo: "src/images/users/lucas.png" },
-        { id: 3, rm: "55218", name: "Vinicius", email: "Vinicius.zamperlini@usp.com" },
-        { id: 4, rm: "99499", name: "Guilherme", email: "guilherme.espim@usp.com", photo: "src/images/users/guilherme.png" },
-        { id: 5, rm: "12345", name: "Pedro", email: "pedro.barros@usp.com" },
+        { id: 1, rm: "98297", name: "João Paulo", email: "joao.zamperlini@usp.com", photo: "src/images/users/joao.png", surname: "Fonseca Zamperlini" },
+        { id: 2, rm: "91267", name: "Lucas", email: "lucas.speranzini@usp.com", photo: "src/images/users/lucas.png", surname: "Speranzini" },
+        { id: 3, rm: "55218", name: "Vinicius", email: "Vinicius.zamperlini@usp.com", surname: "Barros" },
+        { id: 4, rm: "99499", name: "Guilherme", email: "guilherme.espim@usp.com", photo: "src/images/users/guilherme.png", surname: "Monteiro Espim" },
+        { id: 5, rm: "12345", name: "Pedro", email: "pedro.barros@usp.com", surname: "Fernandes Lô de Barros" },
     ];
 
     const [student, setStudent] = useState({})
