@@ -10,9 +10,10 @@
 
     .line {
         display: flex;
+        justify-content: space-evenly;
 
         .info {
-            width: 40%;
+            width: 48%;
 
             .user-data {
                 display: flex;
@@ -60,6 +61,82 @@
                         font-weight: lighter !important;
                     }
                 }
+            }
+        }
+
+        .indicators {
+            display: flex;
+            position: relative;
+            justify-content: space-around;
+            width: 48%;
+            height: 180px;
+            background: $mainGray;
+            border-radius: 5px;
+            // padding: 20px;
+            box-sizing: border-box;
+
+            .column {
+                display: flex;
+                flex-direction: column;
+                justify-content: space-around;
+                .topic {
+                    display: flex;
+                    align-items: center;
+    
+                    img {
+                        width: 35px;
+                        height: 35px;
+                    }
+    
+                    h4{
+                        margin: 0;
+                    }
+                }
+    
+                .value {
+                    margin: 0;
+                    margin-left: 35px;
+                }
+            }
+            
+
+        }
+
+    }
+
+    .charts {
+        display: flex;
+        justify-content: space-around;
+        width: 100%;
+        margin-top: 40px;
+        
+        .bar-chart-holder {
+            width: 35%;
+        }
+
+        .double-chart-holder {
+            width: 40%;
+
+            .line-chart-holder-1 {
+                margin-bottom: 15px;
+                height: 48.2%;
+            }
+
+            .ranking-card-holder {
+                height: 48.2%;
+            }
+        }
+
+        .loader-indicator-holder {
+            height: 100%;
+            width: 20%;
+
+            .doughnut-chart-holder-1 {
+                margin-bottom: 15px;
+            }
+
+            .doughnut-chart-holder-1, .doughnut-chart-holder-2 {
+                height: 48.2%;
             }
 
         }

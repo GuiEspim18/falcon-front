@@ -2,6 +2,10 @@ import { useParams } from "react-router-dom";
 import "./Profile.scss";
 import { useEffect, useState } from "react";
 import IconTextButton from "../../utils/components/Buttons/IconTextButton/IconTextButton";
+import DoughnutChart from "../../utils/components/Charts/DoughnutChart/DoughnutChart";
+import LineChart from "../../utils/components/Charts/LineChart/LineChart";
+import BarChart from "../../utils/components/Charts/BarChart/BarChart";
+import Ranking from "../../utils/components/Ranking/Ranking";
 
 function Profile() {
     const { id } = useParams();
@@ -37,6 +41,62 @@ function Profile() {
                         <IconTextButton className="btn" icon="bar_chart" text="Desempenho" />
                         <IconTextButton className="btn" icon="school" text="Conquistas" />
                         <IconTextButton className="btn" icon="share" text="Compartilhar" />
+                    </div>
+                </div>
+
+                <div className="indicators">
+                    <div className="column">
+                        <div>
+                            <div className="topic">
+                                <img src="/src/images/icons/deployed_code.png" alt="" />
+                                <h4>Pontuação</h4>
+                            </div>
+                            <p className="value">500.000</p>
+                        </div>
+                        <div>
+                            <div className="topic">
+                                <img src="/src/images/icons/victory.png" alt="" />
+                                <h4>Colocação</h4>
+                            </div>
+                            <p className="value">12</p>
+                        </div>
+                    </div>
+                    <div className="column">
+                        <div>
+                            <div className="topic">
+                                <img src="/src/images/icons/book.png" alt="" />
+                                <h4>Módulos Concluídos</h4>
+                            </div>
+                            <p className="value">12</p>
+                        </div>
+                        <div>
+                            <div className="topic">
+                                <img src="/src/images/icons/alarm_on.png" alt="" />
+                                <h4>Tempo de Estudo</h4>
+                            </div>
+                            <p className="value">120 horas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div className="charts">
+                <div className="bar-chart-holder">
+                    <BarChart title="Média de erros por fase" />
+                </div>
+                <div className="double-chart-holder">
+                    <div className="line-chart-holder-1">
+                        <LineChart title="Evolução no ano" />
+                    </div>
+                    <div className="ranking-card-holder">
+                        <BarChart title="Média de objetos retirados por fase" />
+                    </div>
+                </div>
+                <div className="loader-indicator-holder">
+                    <div className="doughnut-chart-holder-1">
+                        <DoughnutChart percentage={80} title="Desempenho"  />
+                    </div>
+                    <div className="doughnut-chart-holder-2">
+                        <DoughnutChart percentage={23} title="Concluiu os módulos sem erros" />
                     </div>
                 </div>
             </div>
