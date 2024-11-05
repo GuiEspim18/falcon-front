@@ -23,14 +23,35 @@
     .table-holder {
         margin-top: 20px;
 
-        .table-title {
+        .title-holder {
             display: flex;
-            margin-bottom: 10px;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 20px;
+            
 
-            .quantity {
-                color: $darkGray;
-                margin-left: 5px;
+            .table-title {
+                display: flex;
+
+                h3 {
+                    margin: 0;
+                }
+    
+                .quantity {
+                    color: $darkGray;
+                    margin-left: 5px;
+                }
+            }
+
+            .actions {
+                display: flex;
+                align-items: center;
+
+                .search {
+                    width: 300px;
+                }
             }
         }
+
     }
 }
