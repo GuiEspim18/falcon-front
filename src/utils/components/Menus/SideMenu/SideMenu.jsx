@@ -23,7 +23,7 @@ function SideMenu() {
             </div>
             <nav className="navs">
                 <NavIconButton icon="dashboard" text="Dashboard" onClick={function() { navigate("/dashboard"); }} selected = { route == "/dashboard" }  />
-                <NavIconButton icon="people" text="Alunos" onClick={function() { navigate("/students"); }} selected = { route == "/students" }  />
+                <NavIconButton icon="people" text="Alunos" onClick={function() { navigate("/students"); }} selected = { route.includes("/students") }  />
                 <NavIconButton icon="account" text="Meu Perfil" />
                 <NavIconButton icon="chat" text="Mensagens" />
                 <NavIconButton icon="stars" text="Rancking" />

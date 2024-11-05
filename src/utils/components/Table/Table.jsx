@@ -2,6 +2,7 @@ import { useEffect, useRef, useState } from "react";
 import "./Table.scss";
 import IconButton from "../Buttons/IconButton/IconButton";
 import IconTextButton from "../Buttons/IconTextButton/IconTextButton";
+import { useNavigate } from "react-router-dom";
 
 function Table(props) {
     const [values, setValues] = useState(props.values);
@@ -9,6 +10,7 @@ function Table(props) {
     const [menuStyle, setMenuStyle] = useState({});
     const [student, setStudent] = useState({});
     const menuRef = useRef(null);
+    const navigate = useNavigate();
 
     useEffect(function () {
         setValues(props.values);
@@ -61,7 +63,7 @@ function Table(props) {
                             {show &&
                                 <div className="option-menu-overlay" onClick={function () { setShow(false); }}>
                                     <div id="modal" ref={menuRef} className="options-modal" style={menuStyle} onClick={stopPropagation} onMouseLeave={function () { setShow(false); }}>
-                                        <IconTextButton className="menu-item" icon="account_profile" text="Ver Estudante" />
+                                        <IconTextButton className="menu-item" icon="account_profile" text="Ver Estudante" onClick={function () { navigate("/students/profile/" + student.id) }} />
                                         <IconTextButton className="menu-item" icon="edit" text="Editar Estudante" onClick={function () {  openProfile(); }} />
                                         <IconTextButton className="menu-item" icon="delete-light" text="Excluir Estudante" />
                                     </div> 
