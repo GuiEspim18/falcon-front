@@ -3,9 +3,10 @@
 .dashboard {
     width: 100%;
     flex-grow: 1;
+    height: 100vh;
     padding: 20px;
     box-sizing: border-box;
-    overflow-y: auto;
+    overflow: auto;
 
     h1 {
         font-size: 1.5rem;
@@ -46,5 +47,9 @@
             }
 
         }
+    }
+
+    .table-holder {
+        margin-top: 50px;
     }
 }

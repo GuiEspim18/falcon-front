@@ -3,8 +3,15 @@ import LineChart from "../../utils/components/Charts/LineChart/LineChart";
 import DoughnutChart from "../../utils/components/Charts/DoughnutChart/DoughnutChart";
 import "./Dashboard.scss";
 import Ranking from "../../utils/components/Ranking/Ranking";
+import Table from "../../utils/components/Table/Table";
 
 function Dashboard() {
+    const tableData = [
+        { id: 1, rm: "98297", name: "João", email: "joao.zamperlini@usp.com" },
+        { id: 2, rm: "91267", name: "Lucas", email: "lucas.speranzini@usp.com" },
+        { id: 3, rm: "55218", name: "Vinicius", email: "Vinicius.zamperlini@usp.com" }
+    ];
+
     return (
         <div className="dashboard">
             <h1>Bem vindo(a), Fábio!</h1>
@@ -31,6 +38,9 @@ function Dashboard() {
                         <DoughnutChart percentage={23} title="Concluiram o módulo 1 sem erros" />
                     </div>
                 </div>
+            </div>
+            <div className="table-holder">
+                <Table headers={["ID", "RM", "Nome", "Email"]} values={tableData} />
             </div>
         </div>
     );
