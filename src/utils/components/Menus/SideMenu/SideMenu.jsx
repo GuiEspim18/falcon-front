@@ -1,9 +1,20 @@
 import NavIconButton from "../../Buttons/NavIconButton/NavIconButton";
 import { useNavigate } from "react-router-dom";
 import "./SideMenu.scss";
+import { useEffect, useState } from "react";
+import { useRouterChange } from "../../../../hooks/UseRouteChange";
 
 function SideMenu() {
     const navigate = useNavigate();
+    const [route, setRoute] = useState("");
+
+    useEffect(function () {
+        setRoute(window.location.pathname);
+    }, []);
+
+    useRouterChange(function (location) {
+        setRoute(location.pathname);
+    });
 
     return (
         <section className="side-menu">
@@ -11,8 +22,8 @@ function SideMenu() {
                 <img src="/src/images/logo.png" alt="" className="logo" />
             </div>
             <nav className="navs">
-                <NavIconButton icon="dashboard" text="Dashboard" onClick={function() { navigate("/dashboard"); }} />
-                <NavIconButton icon="people" text="Alunos" onClick={function() { navigate("/students"); }} />
+                <NavIconButton icon="dashboard" text="Dashboard" onClick={function() { navigate("/dashboard"); }} selected = { route == "/dashboard" }  />
+                <NavIconButton icon="people" text="Alunos" onClick={function() { navigate("/students"); }} selected = { route == "/students" }  />
                 <NavIconButton icon="account" text="Meu Perfil" />
                 <NavIconButton icon="chat" text="Mensagens" />
                 <NavIconButton icon="stars" text="Rancking" />
