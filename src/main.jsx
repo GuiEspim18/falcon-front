@@ -4,6 +4,7 @@ import App from "./App.jsx";
 import "./assets/css/styles.scss";
 import { Navigate, RouterProvider, createBrowserRouter, redirect } from "react-router-dom";
 import Dashboard from "./pages/Dashoard/Dashboard.jsx";
+import Students from "./pages/Students/Students.jsx";
 
 const routes = createBrowserRouter([
   {
@@ -18,7 +19,11 @@ const routes = createBrowserRouter([
       {
         path: "/dashboard",
         element: <Dashboard />
-      }
+      },
+      {
+        path: "/students",
+        element: <Students />
+      },
     ]
   }
 ]);

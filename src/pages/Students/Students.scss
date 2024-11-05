@@ -1,0 +1,10 @@
+@import "/src/assets/css/colors.scss";
+
+.students {
+    width: 100%;
+    flex-grow: 1;
+    height: 100vh;
+    padding: 20px;
+    box-sizing: border-box;
+    overflow: auto;
+}
