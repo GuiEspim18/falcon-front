@@ -1,7 +1,7 @@
 import TitleHeader from "./utils/components/Headers/TitleHeader/TitleHeader";
 import SideMenu from "./utils/components/Menus/SideMenu/SideMenu";
 import "./App.scss";
-import Dashboard from "./pages/Dashoard/Dashboard";
+import { Outlet } from "react-router-dom";
 
 function App() {
   return (
@@ -9,9 +9,7 @@ function App() {
         <SideMenu />
         <section className="page-content">
           <TitleHeader title="Dashboard" />
-          <Dashboard /> 
-          {/* <LineChart /> */}
-          {/* <DoughnutChart percentage={80} /> */}
+          <Outlet />
         </section>
     </section>
   );
