@@ -21,16 +21,24 @@ function Table(props) {
         }
     }
 
+    function action(u) {
+        if (props.onAction) {
+            props.onAction(u);
+        }
+    }
+
     function loadValues() {
         return values.map(function (value, i) {
             return (
                 <tr key={i}>
                     {Object.keys(value).map(function (key, index) {
-                        return <td key={index}>{value[key]}</td>;
+                        if (index < props.headers.length) {
+                            return <td key={index}>{value[key]}</td>;
+                        }
                     })}
                     {props.actions && 
                         <td className="actions">
-                            <IconButton icon="options" />
+                            <IconButton icon="options" onClick={function() { action(value) }} />
                         </td>
                     }
                 </tr>
