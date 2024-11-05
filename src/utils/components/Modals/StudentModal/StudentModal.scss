@@ -14,7 +14,7 @@
     overflow: hidden;
 
     .modal {
-        width: 30%;
+        width: 600px;
         padding: 10px;
         border-radius: 5px;
         background: $mainWhite;
@@ -43,7 +43,6 @@
 
         .student-data {
             padding-top: 50px;
-            margin-left: 10px;
             width: 25%;
             margin-bottom: 20px;
 
@@ -68,7 +67,39 @@
             justify-content: space-between;
 
             .email {
-                width: 369px;
+                width: 89%;
+            }
+
+            .name-input {
+                width: 40%;
+            }
+        }
+
+        .buttons {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            margin-top: 140px;
+
+            .delete-button {
+                background: $lightRed;
+                border: solid 1px $red;
+                box-sizing: border-box;
+                
+                p {
+                    color: $red !important;
+                }
+
+            }
+        }
+        
+        .options {
+            display: flex;
+
+            .submit-button {
+                background: $mainBlue !important;
+                color: $mainWhite !important;
+                margin-left: 12px;
             }
         }
     }

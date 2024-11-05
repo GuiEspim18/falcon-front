@@ -10,9 +10,9 @@ function Students() {
     const tableData = [
         { id: 1, rm: "98297", name: "João Paulo", email: "joao.zamperlini@usp.com", photo: "src/images/users/joao.png", surname: "Fonseca Zamperlini" },
         { id: 2, rm: "91267", name: "Lucas", email: "lucas.speranzini@usp.com", photo: "src/images/users/lucas.png", surname: "Speranzini" },
-        { id: 3, rm: "55218", name: "Vinicius", email: "Vinicius.zamperlini@usp.com", surname: "Barros" },
+        { id: 3, rm: "55218", name: "Vinicius", email: "Vinicius.zamperlini@usp.com", surname: "Barros", photo: "src/images/users/vinicius.jpg"  },
         { id: 4, rm: "99499", name: "Guilherme", email: "guilherme.espim@usp.com", photo: "src/images/users/guilherme.png", surname: "Monteiro Espim" },
-        { id: 5, rm: "12345", name: "Pedro", email: "pedro.barros@usp.com", surname: "Fernandes Lô de Barros" },
+        { id: 5, rm: "12345", name: "Pedro", email: "pedro.barros@usp.com", surname: "Fernandes Lô de Barros", photo: "src/images/users/pedro.jpg" },
     ];
 
     const [student, setStudent] = useState({})
@@ -42,7 +42,7 @@ function Students() {
                         </div>
                         
                     </div>
-                    <Table headers={["ID", "RM", "Nome", "Email"]} values={tableData} actions={true} onAction={openModal}  />
+                    <Table headers={["ID", "RM", "Nome", "Email"]} values={tableData} actions={true} openProfile={openModal}  />
                 </div>
             </div>
         </>

@@ -1,9 +1,13 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import "./Table.scss";
 import IconButton from "../Buttons/IconButton/IconButton";
+import IconTextButton from "../Buttons/IconTextButton/IconTextButton";
 
 function Table(props) {
     const [values, setValues] = useState(props.values);
+    const [show, setShow] = useState(false);
+    const [menuStyle, setMenuStyle] = useState({});
+    const menuRef = useRef(null);
 
     useEffect(function () {
         setValues(props.values);
@@ -21,10 +25,24 @@ function Table(props) {
         }
     }
 
-    function action(u) {
-        if (props.onAction) {
-            props.onAction(u);
+    function openProfile(u) {
+        if (props.openProfile) {
+            props.openProfile(u);
         }
+    }
+
+    function stopPropagation(event) {
+        event.stopPropagation();
+    }
+
+    function openMenu(event) {
+        const buttonRect = event.target.getBoundingClientRect();
+        setMenuStyle({
+            top: `${buttonRect.bottom}px`,
+            left: `${buttonRect.left - 180}px`,
+            width: "200px"
+        });
+        setShow(true);
     }
 
     function loadValues() {
@@ -36,9 +54,18 @@ function Table(props) {
                             return <td key={index}>{value[key]}</td>;
                         }
                     })}
-                    {props.actions && 
+                    {props.actions &&
                         <td className="actions">
-                            <IconButton icon="options" onClick={function() { action(value) }} />
+                            {show &&
+                                <div className="option-menu-overlay" onClick={function () { setShow(false); }}>
+                                    <div id="modal" ref={menuRef} className="options-modal" style={menuStyle} onClick={stopPropagation} onMouseLeave={function () { setShow(false); }}>
+                                        <IconTextButton className="menu-item" icon="account_profile" text="Ver Estudante" />
+                                        <IconTextButton className="menu-item" icon="edit" text="Editar Estudante" onClick={function () { openProfile(value); }} />
+                                        <IconTextButton className="menu-item" icon="delete-light" text="Excluir Estudante" />
+                                    </div> 
+                                </div>
+                            }
+                            <IconButton icon="options" onClick={openMenu} getEvent={true} />
                         </td>
                     }
                 </tr>

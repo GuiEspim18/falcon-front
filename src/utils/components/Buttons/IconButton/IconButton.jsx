@@ -2,9 +2,13 @@ import "./IconButton.scss";
 
 function IconButton(props) {
 
-    function click() {
+    function click(event) {
         if (props.onClick) {
-            props.onClick();
+            if (props.getEvent) {
+                props.onClick(event);
+            } else {
+                props.onClick();
+            }
         }
     }
 
