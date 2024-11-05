@@ -8,6 +8,7 @@
     padding: 0px 10px;
     box-sizing: border-box;
     display: flex;
+    align-items: center;
 
     input {
         flex: 1;
@@ -18,5 +19,10 @@
         padding: 0px 5px;
         box-sizing: border-box;
         font-size: 15px;
+    }
+
+    img {
+        width: 25px;
+        height: 25px;
     }
 }

@@ -1,3 +1,5 @@
+import DefaultButton from "../../utils/components/Buttons/DefaultButton/DefaultButton";
+import IconTextButton from "../../utils/components/Buttons/IconTextButton/IconTextButton";
 import SearchInput from "../../utils/components/Inputs/SearchInput/SearchInput";
 import Table from "../../utils/components/Table/Table";
 import "./Students.scss";
@@ -23,6 +25,8 @@ function Students() {
                     </div>
                     <div className="actions">
                         <SearchInput className="search" />
+                        <DefaultButton text="Filtros" className="filters" />
+                        <IconTextButton icon="add" text="Adicionar Aluno" className="add-student" />
                     </div>
                     
                 </div>

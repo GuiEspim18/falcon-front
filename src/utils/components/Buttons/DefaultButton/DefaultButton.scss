@@ -1,0 +1,10 @@
+@import "/src/assets/css/colors.scss";
+
+.default-button {
+    height: 32px;
+    border-radius: 5px;
+    background: $mainWhite;
+    border: solid 1px $darkGray;
+    color: $darkGray;
+    cursor: pointer;
+}
