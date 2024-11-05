@@ -7,6 +7,7 @@ function Table(props) {
     const [values, setValues] = useState(props.values);
     const [show, setShow] = useState(false);
     const [menuStyle, setMenuStyle] = useState({});
+    const [student, setStudent] = useState({});
     const menuRef = useRef(null);
 
     useEffect(function () {
@@ -25,9 +26,9 @@ function Table(props) {
         }
     }
 
-    function openProfile(u) {
+    function openProfile() {
         if (props.openProfile) {
-            props.openProfile(u);
+            props.openProfile(student);
         }
     }
 
@@ -35,7 +36,8 @@ function Table(props) {
         event.stopPropagation();
     }
 
-    function openMenu(event) {
+    function openMenu(event, u) {
+        setStudent(u);
         const buttonRect = event.target.getBoundingClientRect();
         setMenuStyle({
             top: `${buttonRect.bottom}px`,
@@ -46,7 +48,7 @@ function Table(props) {
     }
 
     function loadValues() {
-        return values.map(function (value, i) {
+        return values.map(function (value, i) {            
             return (
                 <tr key={i}>
                     {Object.keys(value).map(function (key, index) {
@@ -60,12 +62,12 @@ function Table(props) {
                                 <div className="option-menu-overlay" onClick={function () { setShow(false); }}>
                                     <div id="modal" ref={menuRef} className="options-modal" style={menuStyle} onClick={stopPropagation} onMouseLeave={function () { setShow(false); }}>
                                         <IconTextButton className="menu-item" icon="account_profile" text="Ver Estudante" />
-                                        <IconTextButton className="menu-item" icon="edit" text="Editar Estudante" onClick={function () { openProfile(value); }} />
+                                        <IconTextButton className="menu-item" icon="edit" text="Editar Estudante" onClick={function () {  openProfile(); }} />
                                         <IconTextButton className="menu-item" icon="delete-light" text="Excluir Estudante" />
                                     </div> 
                                 </div>
                             }
-                            <IconButton icon="options" onClick={openMenu} getEvent={true} />
+                            <IconButton icon="options" onClick={function (e) { openMenu(e, value); }} getEvent={true} />
                         </td>
                     }
                 </tr>
