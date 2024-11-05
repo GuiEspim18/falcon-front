@@ -21,7 +21,7 @@ function Dashboard() {
                 </div>
                 <div className="double-chart-holder">
                     <div className="line-chart-holder-1">
-                        <LineChart title="Evolução dos resitentes no ano" />
+                        <LineChart title="Evolução dos residentes no ano" />
                     </div>
                     <div className="ranking-card-holder">
                         <Ranking />

@@ -31,16 +31,6 @@ function Table(props) {
                     {props.actions && 
                         <td className="actions">
                             <IconButton icon="options" />
-                            {/* {props.edit && 
-                                <IconButton className="action-button" rippleColor={shadow} onClick={function () { onEdit(value.id) }}>
-                                    <Edit color={yellow} />
-                                </IconButton>
-                            }
-                            {props.delete && 
-                                <IconButton className="action-button" rippleColor={shadow} onClick={function () { onDelete(value.id) }}>
-                                    <Delete color={red} />
-                                </IconButton>
-                            } */}
                         </td>
                     }
                 </tr>
