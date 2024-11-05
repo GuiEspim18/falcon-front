@@ -24,6 +24,7 @@ function DoughnutChart(props) {
     };
 
     const options = {
+        resposive: true,
         rotation: 0, // Começa do topo
         circumference: 360, // Círculo completo
         plugins: {

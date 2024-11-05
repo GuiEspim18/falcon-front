@@ -1,1 +1,44 @@
 @import "/src/assets/css/colors.scss";
+
+.ranking-card {
+    border: solid 1px $secodaryGray;
+    border-radius: 5px;
+    padding: 5px 20px;
+    box-sizing: border-box;
+    height: 100%;
+
+    h1 {
+        margin: 0;
+        text-align: center;
+    }
+
+    ul {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+
+        li > .item {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-top: 15px;
+
+            img {
+                width: 60px;
+                height: 60px;
+            }
+
+            h3, p {
+                margin: 0;
+            }
+
+            h3 {
+                margin-bottom: 5px;
+            }
+
+            p {
+                color: $darkGray;
+            }
+        }
+    }
+}

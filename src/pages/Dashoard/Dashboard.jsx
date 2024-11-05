@@ -2,6 +2,7 @@ import BarChart from "../../utils/components/Charts/BarChart/BarChart";
 import LineChart from "../../utils/components/Charts/LineChart/LineChart";
 import DoughnutChart from "../../utils/components/Charts/DoughnutChart/DoughnutChart";
 import "./Dashboard.scss";
+import Ranking from "../../utils/components/Ranking/Ranking";
 
 function Dashboard() {
     return (
@@ -14,6 +15,9 @@ function Dashboard() {
                 <div className="double-chart-holder">
                     <div className="line-chart-holder-1">
                         <LineChart title="Evolução dos resitentes no ano" />
+                    </div>
+                    <div className="ranking-card-holder">
+                        <Ranking />
                     </div>
                     {/* <div className="line-chart-holder-2">
                         <LineChart />
